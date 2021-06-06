@@ -175,8 +175,8 @@ it is restored only once."
                       (progn
                         (backward-delete-char 1)
                         (and tex-obj
-                             (goto-char tex-obj))
-                        (delete-char 1))
+                             (goto-char tex-obj)
+                             (delete-char 1)))
                     (goto-char tex-obj))
                   (point)))
          (end (point))
