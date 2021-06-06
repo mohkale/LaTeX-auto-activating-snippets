@@ -388,7 +388,8 @@ it is restored only once."
 
 (defun laas--no-backslash-before-point? ()
   "Check that the char before `point' is not a backslash."
-  (/= (char-before) ?\\))
+  (when-let ((ch (char-before)))
+    (/= ch ?\\)))
 
 
 (apply #'aas-set-snippets 'laas-mode laas-basic-snippets)
